@@ -158,6 +158,24 @@ a.button span {
 #download-tar-gz span {
   background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
 }
+#google-group span {
+  background-image: none, url(../images/noun_project_9477.svg);
+  background-position: 12px;
+  background-repeat: no-repeat;
+  background-size: 28px 23px;
+}
+#google-group {
+  margin-right: 0;
+}
+#meetup span {
+  background-image: none, url("http://img1.meetupstatic.com/84869143793177372874/img/birddog/everywhere_widget.png");
+  background-position: 12px;
+  background-repeat: no-repeat;
+  background-size: 28px 23px;
+}
+#meetup {
+  margin-right: 0;
+}
 #view-on-github span {
   background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
 }
