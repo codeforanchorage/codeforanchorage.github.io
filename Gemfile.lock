@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bootstrap-sass (3.0.0.0.rc2)
+      sass (~> 3.2)
+    sass (3.2.12)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bootstrap-sass (~> 3.0.0.0.rc)
+  sass (~> 3.2.12)
