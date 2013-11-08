@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/**
+ * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
+ * originally authored by Dave Gamache. This translation offers
+ * mixins that support fluid and as well as fixed grids to supplement
+ * the work that Dave Gamache has done.
+ * @author Dennis Thompson <http://www.atomicpages.net>
+ * @copyright Copyright (c) 2013 AtomicPages LLC
+ * @license MIT
+ * @version 1.5.1
+ */
+/* SITE STYLES
+ * ------------------------------------------------ */
+/* Add site styles here such as a { color: #000; } */
+/* line 19, ../sass/layout.scss */
+footer {
+  background: transparent url("../images/hr.png") 0 0 no-repeat;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* line 28, ../sass/layout.scss */
+hr {
+  height: 1px;
+  line-height: 1px;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border: none;
+  background: transparent url("../images/hr.png") 50% 0 no-repeat;
+}
+
+/* PAGE STYLES
+ * ------------------------------------------------ */
+/* Add page styles here such as .page-home { background: rgba(0, 0, 0, 0.4); } */
+/* line 41, ../sass/layout.scss */
+a.image-button {
+  color: #2b2c2d;
+}
+
+/* line 44, ../sass/layout.scss */
+.image-button span {
+  padding-left: 50px;
+  padding-right: 25px;
+  padding-top: 5px;
+  display: block;
+  height: 23px;
+}
+
+/* line 53, ../sass/layout.scss */
+.title-bar h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #399fd3;
+}
+/* line 56, ../sass/layout.scss */
+.title-bar h1 a {
+  color: #399fd3;
+}
+/* line 61, ../sass/layout.scss */
+.title-bar h5 {
+  font-family: "Oswald", sans-serif;
+  color: #6d6e71;
+}
+
+/* line 67, ../sass/layout.scss */
+.back span {
+  background-image: none, url(../images/back.svg);
+  background-position: 12px;
+  background-repeat: no-repeat;
+  background-size: 28px 23px;
+}
+
+/* line 73, ../sass/layout.scss */
+#github span {
+  background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
+}
+
+/* line 77, ../sass/layout.scss */
+#google-group span {
+  background-image: none, url(../images/group.svg);
+  background-position: 12px;
+  background-repeat: no-repeat;
+  background-size: 28px 23px;
+}
+
+/* line 84, ../sass/layout.scss */
+#meetup span {
+  background-image: none, url("http://img1.meetupstatic.com/84869143793177372874/img/birddog/everywhere_widget.png");
+  background-position: 12px;
+  background-repeat: no-repeat;
+  background-size: 28px 23px;
+}
+
+/* line 91, ../sass/layout.scss */
+#safe-space span {
+  background-image: none, url(../images/safe.svg);
+  background-position: 12px;
+  background-repeat: no-repeat;
+  background-size: 28px 23px;
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  /* add code here */
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  /* add code here */
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* add code here */
+}
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* add code here */
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* add code here */
+}

@@ -1,0 +1,59 @@
+// GLOBAL VARIABLES - include your variables here or alter the predefined vars
+// See skeleton file for copyright info
+@import "compass/utilities";
+
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+// CFA VARIABLES
+$cfaRed: #cf1b41;
+$cfaBlue: #399fd3;
+$cfaGrey: #939699;
+$brigadeGrey: #6D6E71;
+
+$cabinStack: 'Cabin', sans-serif;
+$oswaldStack: 'Oswald', sans-serif;
+$helveticaStack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fakeGothamStack: 'Montserrat', sans-serif;
+
+// background vars
+$backgroundColor: #fff; 														// default background information
+
+// button vars
+$buttonColor: tint($cfaGrey, 100);//#eee;
+$buttonColorHover: tint($cfaGrey, 95);//#ddd; 
+$buttonColorActive: tint($cfaGrey, 90);
+
+// font vars
+$fontSize: 14px; 																// default font size. Change here will adjust sizes across the board.
+$fontFamily: $cabinStack;	// default fonts
+$fontColor: $brigadeGrey; 																// default font color
+
+// form vars
+$formFont: $fontFamily; 														// default font font
+
+// link vars
+$linkColor: #551A8B;																// default link INERT color
+$linkHoverColor: tint($linkColor, 30);;															// default link HOVER color
+$linkDecoration: none;														// default link decoration
+
+// heading vars
+$headingFamily: $cabinStack;							// default heading font
+$headingColor: $cfaRed;															// default heading color
+
+// grid variables
+$baseWidth: 		960px; 														// change this to alter the overall width of the grid
+$baseWidthMQ:		960px; 														// base width for media query calculations in layout file
+$baseColWidth: 		40px;														// change this the alter the grid calculation, see _mixins file for more details
+$baseGutterWidth:	20px;														// calculation has changed, this is mainly here for consistency with 960.gs
+$isFluid: 			false;														// want a fluid grid by default?
+
+// ------ CHANGE MAY CAUSE UNDESIRED RESULTS
+$baseColCount: 		16;															// number of cols to generate
+
+// media query dimensions
+$tabletWidth: 			768px;
+$mobilePortraitWidth: 	300px;
+$mobileLandscapeWidth: 	420px;
