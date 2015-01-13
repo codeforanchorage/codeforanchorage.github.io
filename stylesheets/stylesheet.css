@@ -168,10 +168,7 @@ a.button span {
   margin-right: 0;
 }
 #meetup span {
-  background-image: none, url("http://img1.meetupstatic.com/84869143793177372874/img/birddog/everywhere_widget.png");
-  background-position: 12px;
-  background-repeat: no-repeat;
-  background-size: 28px 23px;
+  background: transparent url(../images/meetup.png) 12px 50% no-repeat;
 }
 #meetup {
   margin-right: 0;
