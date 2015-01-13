@@ -187,6 +187,12 @@ a.button span {
   margin-right: 0;
 }
 
+#facebook span {
+  background: transparent url(../images/FB-f-Logo__blue_23.png) 12px 50% no-repeat;
+}
+#facebook {
+  margin-right: 0;
+}
 
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
