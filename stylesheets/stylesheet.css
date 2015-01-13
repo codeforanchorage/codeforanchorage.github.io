@@ -183,6 +183,14 @@ a.button span {
   margin-right: 0;
 }
 
+#twitter span {
+  background: transparent url(../images/Twitter_logo_blue.png) 12px 50% no-repeat;
+}
+#twitter {
+  margin-right: 0;
+}
+
+
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
