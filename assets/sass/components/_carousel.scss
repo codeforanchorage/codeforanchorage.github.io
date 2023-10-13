@@ -1,0 +1,173 @@
+///
+/// Cascade by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Carousel */
+
+	.carousel {
+		position: relative;
+		margin: 0 0 _size(element-margin) 0;
+
+		article {
+			@include vendor('transform', 'translateY(0.5em)');
+			@include vendor('transition', 'all 0.35s ease-in-out');
+			opacity: 0;
+			visibility: hidden;
+			margin: 0 auto;
+			background-color: _palette(bg);
+			border-radius: _size(border-radius);
+			box-shadow: 0 0.25rem 1rem rgba(#000, 0.1);
+			overflow: hidden;
+
+			&.visible {
+				@include vendor('transform', 'translateY(0)');
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.image {
+				display: block;
+				position: relative;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				height: 24rem;
+				overflow: hidden;
+
+				img {
+					@include vendor('object-fit', 'cover');
+					position: absolute;
+					top: 0;
+					left: 0;
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			.content {
+				@include padding(5rem, 5rem);
+				color: _palette(fg) !important;
+				text-align: center;
+
+				h3 {
+					color: _palette(fg-bold) !important;
+				}
+			}
+		}
+
+		nav {
+			a {
+				@include icon(false, solid);
+				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+				height: 100%;
+				opacity: 0.325;
+				position: absolute;
+				top: 0;
+				width: 8rem;
+				color: _palette(bg) !important;
+
+				.label {
+					display: none;
+				}
+
+				&:before {
+					display: block;
+					font-size: 5em;
+					height: 2em;
+					left: 50%;
+					line-height: 2em;
+					margin: -1em 0 0 -1em;
+					position: absolute;
+					text-align: center;
+					top: 50%;
+					width: 2em;
+				}
+
+				&.previous {
+					left: -8rem;
+
+					&:before {
+						content: '\f104';
+					}
+				}
+
+				&.next {
+					right: -8rem;
+
+					&:before {
+						content: '\f105';
+					}
+				}
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		@include breakpoint('<=large') {
+			article {
+				width: calc(100% - 4rem);
+
+				.image {
+					height: 20rem;
+				}
+
+				.content {
+					@include padding(4rem, 4rem);
+
+					br {
+						display: none;
+					}
+				}
+			}
+
+			nav {
+				a {
+					width: 5rem;
+
+					&:before {
+						font-size: 4rem;
+					}
+
+					&.previous {
+						left: -3rem;
+					}
+
+					&.next {
+						right: -3rem;
+					}
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			article {
+				@include vendor('transform', 'translateY(0)');
+				display: block !important;
+				opacity: 1;
+				visibility: visible;
+				width: 100%;
+				margin: 2em auto 0 auto;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				.image {
+					height: 15rem;
+				}
+
+				.content {
+					@include padding(2rem, 1.5rem);
+				}
+			}
+
+			nav {
+				display: none;
+			}
+		}
+	}

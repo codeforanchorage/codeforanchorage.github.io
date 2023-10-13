@@ -1,0 +1,191 @@
+///
+/// Cascade by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Spotlight */
+
+	.spotlight {
+		padding: 7rem 0;
+		position: relative;
+
+		> .inner {
+			@include vendor('display', 'flex');
+			@include vendor('align-items', 'center');
+			@include vendor('justify-content', 'space-between');
+			margin: 0 auto;
+			max-width: _size(container);
+			width: calc(100% - 4rem);
+		}
+
+		h2 {
+			@include vendor('transition', (
+				'opacity 0.5s ease-out',
+				'transform 0.5s ease-out'
+			));
+			margin-bottom: 0;
+		}
+
+		.image {
+			border-radius: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 45%;
+
+			img {
+				@include vendor('object-fit', 'cover');
+				border-radius: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.content {
+			@include padding(5rem, 5rem);
+			@include vendor('transition', (
+				'opacity 0.5s ease-out',
+				'transform 0.5s ease-out'
+			));
+			background-color: _palette(bg);
+			border-radius: _size(border-radius);
+			position: relative;
+			z-index: 1;
+			width: 55%;
+		}
+
+		&.odd {
+			.image {
+				right: 0;
+			}
+		}
+
+		&.even {
+			> .inner {
+				@include vendor('flex-direction', 'row-reverse');
+			}
+
+			.image {
+				left: 0;
+			}
+		}
+
+		@each $accent in ('accent1', 'accent2', 'accent3', 'accent4') {
+			&.#{$accent} {
+				background-color: _palette($accent, bg);
+
+				h2 {
+					color: _palette($accent, fg-bold);
+				}
+			}
+		}
+
+		&.is-inactive {
+			h2 {
+				@include vendor('transform', 'translateY(-2rem)');
+				opacity: 0;
+			}
+
+			.content {
+				@include vendor('transform', 'translateY(2rem)');
+				opacity: 0;
+			}
+		}
+
+		@include breakpoint('<=large') {
+			padding: 5.5rem 0;
+
+			> .inner {
+				@include vendor('justify-content', 'flex-start');
+			}
+
+			h2 {
+				padding: 0 3rem;
+				width: 40%;
+				text-align: center;
+			}
+
+			.content {
+				@include padding(4rem, 4rem);
+				width: 45%;
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			padding: 0;
+			text-align: center;
+
+			> .inner {
+				display: block;
+				max-width: none;
+				width: 100%;
+			}
+
+			h2 {
+				padding: 2.5rem 2.5rem;
+				width: 100%;
+
+				br {
+					display: none;
+				}
+			}
+
+			ul.actions {
+				@include vendor('justify-content', 'center');
+				width: 100%;
+				margin-left: 0;
+
+				li {
+					&:first-child {
+						padding-left: 0;
+					}
+				}
+			}
+
+			.image {
+				display: block;
+				height: 40vh;
+				min-height: 20rem;
+				width: 100%;
+				position: relative;
+			}
+
+			.content {
+				@include padding(3rem, 2.5rem);
+				border-radius: 0;
+				width: 100%;
+
+				h3 {
+					br {
+						display: none;
+					}
+				}
+			}
+
+			&.is-inactive {
+				h2 {
+					@include vendor('transform', 'none');
+					opacity: 0;
+				}
+
+				.content {
+					@include vendor('transform', 'none');
+					opacity: 0;
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			h2 {
+				padding: 1.5rem;
+			}
+
+			.content {
+				@include padding(2rem, 1.5rem);
+			}
+		}
+	}

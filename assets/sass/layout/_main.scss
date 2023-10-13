@@ -1,0 +1,19 @@
+///
+/// Cascade by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Main */
+
+	#main {
+		padding-top: 9rem;
+
+		@include breakpoint('<=medium') {
+			padding-top: 6.5rem;
+		}
+
+		@include breakpoint('<=small') {
+			padding-top: 5rem;
+		}
+	}
