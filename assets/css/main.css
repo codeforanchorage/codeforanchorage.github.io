@@ -5467,3 +5467,50 @@ input, select, textarea {
 				}
 
 		}
+		
+/* Default background image (for smallest screens) */
+.element {
+    background-image: url('../../images/banner/dt-320.webp'),
+			    	  url('../../images/banner/DT-320.jpg'); /* Fallback for non-WebP supporting browsers */
+
+}
+
+/* Media query for screen widths greater than 640px */
+@media (min-width: 640px) {
+    .element {
+		background-image: url('../../images/banner/dt-980.webp'),
+		                  url('../../images/banner/DT-980.jpg'); /* Fallback for non-WebP supporting browsers */
+    }
+}
+
+/* Media query for screen widths greater than 1280px */
+@media (min-width: 1280px) {
+    .element {
+		background-image: url('../../images/banner/dt-1350.webp'),
+		                  url('../../images/banner/DT-1350.jpg'); /* Fallback for non-WebP supporting browsers */
+    }
+}
+
+/* Media query for screen widths greater than 1440px */
+@media (min-width: 1440px) {
+    .element {
+		background-image: url('../../images/banner/dt-1620.webp'),
+		                  url('../../images/banner/DT-1620.jpg'); /* Fallback for non-WebP supporting browsers */
+    }
+}
+
+/* Media query for screen widths greater than 1680px */
+@media (min-width: 1680px) {
+    .element {
+		background-image: url('../../images/banner/dt-1850.webp'),
+		                  url('../../images/banner/DT-1850.jpg'); /* Fallback for non-WebP supporting browsers */
+    }
+}
+
+/* Media query for screen widths greater than 1920px */
+@media (min-width: 1920px) {
+    .element {
+		background-image: url('../../images/banner/dt-2048.webp'),
+		                  url('../../images/banner/DT-2048.jpg'); /* Fallback for non-WebP supporting browsers */
+    }
+}
