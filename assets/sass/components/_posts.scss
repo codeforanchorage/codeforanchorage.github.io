@@ -1,0 +1,62 @@
+///
+/// Cascade by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Posts */
+
+	.posts {
+		@include fixed-grid((
+			columns: 2,
+			gutters: 3rem
+		));
+		margin-bottom: (_size(element-margin) * 1.5);
+
+		article {
+			border-radius: _size(border-radius);
+			text-align: center;
+		}
+
+		.image {
+			display: block;
+			width: 100%;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+
+			img {
+				width: 100%;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		.content {
+			@include padding(3rem, 3rem);
+			box-shadow: 0 0 1rem rgba(#000, 0.1);
+		}
+
+		@include breakpoint('<=medium') {
+			@include fixed-grid-resize((
+				columns: 1,
+				gutters: 3rem,
+				prev-columns: 2,
+			));
+
+			.content {
+				@include padding(2.5rem, 2rem);
+			}
+		}
+
+		@include breakpoint('<=small') {
+			@include fixed-grid-resize((
+				columns: 1,
+				gutters: 2rem,
+				prev-columns: 2,
+			));
+
+			.content {
+				@include padding(2rem, 1.5rem);
+			}
+		}
+	}

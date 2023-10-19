@@ -1,0 +1,73 @@
+///
+/// Cascade by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Section/Article */
+
+	section, article {
+		&.special {
+			text-align: center;
+		}
+	}
+
+	header {
+		p {
+			max-width: 50rem;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h1 + p,
+		h2 + p,
+		h3 + p {
+			margin-top: (_size(element-margin) * -0.55);
+		}
+
+		h4 + p,
+		h5 + p,
+		h6 + p {
+			font-size: 0.9rem;
+			margin-top: (_size(element-margin) * -0.3);
+		}
+
+		&.major {
+			margin-bottom: 5rem;
+			text-align: center;
+
+			h1, h2 {
+				&:after {
+					background-color: currentColor;
+					content: '';
+					display: block;
+					height: 3px;
+					margin: 1.5rem auto;
+					width: 4rem;
+				}
+			}
+
+			p {
+				margin-top: 0;
+			}
+
+			@include breakpoint('<=large') {
+				margin-bottom: 3.5rem;
+			}
+
+			@include breakpoint('<=small') {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	@mixin color-section($p: null) {
+		header {
+			p {
+				color: _palette($p, fg-light);
+			}
+		}
+	}
+
+	@include color-section;
