@@ -29,14 +29,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-.carousel .image img {
-  width: 100%; /* Ensures the image scales to the width of its container */
-  height: auto; /* Maintains the image's aspect ratio */
-  object-fit: contain; /* Ensures the image fits without cropping */
-  max-width: 100%; /* Prevents the image from exceeding container width */
-  max-height: 100%; /* Prevents the image from exceeding container height */
-}
-
 
 
 body {
@@ -4387,10 +4379,10 @@ input, select, textarea {
 			}
 
 				.carousel article .image img {
-					-moz-object-fit: cover;
-					-webkit-object-fit: cover;
-					-ms-object-fit: cover;
-					object-fit: cover;
+					-moz-object-fit: contain;
+					-webkit-object-fit: contain;
+					-ms-object-fit: contain;
+					object-fit: contain;
 					position: absolute;
 					top: 0;
 					left: 0;
